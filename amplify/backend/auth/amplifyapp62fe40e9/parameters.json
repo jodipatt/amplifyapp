@@ -1,0 +1,72 @@
+{
+    "identityPoolName": "amplifyapp62fe40e9_identitypool_62fe40e9",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "amplif62fe40e9",
+    "userPoolName": "amplifyapp62fe40e9_userpool_62fe40e9",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "name",
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email",
+        "name"
+    ],
+    "userpoolClientLambdaRole": "amplif62fe40e9_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "sharedId": "62fe40e9",
+    "resourceName": "amplifyapp62fe40e9",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "manual",
+    "userPoolGroupList": [
+        "admin",
+        "doctors",
+        "nurses",
+        "patients"
+    ],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "dependsOn": [],
+    "thirdPartyAuth": false,
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": "{}",
+    "hostedUI": false,
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "breakCircularDependency": true,
+    "permissions": [],
+    "authProviders": []
+}
