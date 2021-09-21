@@ -42,15 +42,7 @@
       "service": "Lambda",
       "providerPlugin": "awscloudformation",
       "build": true,
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "amplifyapp62fe40e9",
-          "attributes": [
-            "UserPoolId"
-          ]
-        }
-      ]
+      "dependsOn": []
     }
   },
   "api": {

@@ -13,12 +13,13 @@
     },
     "categories": {
       "auth": {
-        "amplifyapp62fe40e9": {}
+        "amplifyapp62fe40e9": {},
+        "userPoolGroups": {}
       },
       "function": {
         "AdminQueries9c84ce0e": {
           "deploymentBucketName": "amplify-amplify4798ecc2fb994-staging-185548-deployment",
-          "s3Key": "amplify-builds/AdminQueries9c84ce0e-506c34657765375a6b33-build.zip"
+          "s3Key": "amplify-builds/AdminQueries9c84ce0e-354943754358544b4967-build.zip"
         }
       }
     }
