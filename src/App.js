@@ -302,7 +302,7 @@ const App = () => {
           </Route>  */}
     </Switch>
 
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -315,7 +315,7 @@ const App = () => {
           <AmplifySignOut />
         </ul>
 
-        <hr />
+        <hr /> */}
 
         {/*
           A <Switch> looks through all its children <Route>
