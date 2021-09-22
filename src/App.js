@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Amplify from '@aws-amplify/core';
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
@@ -16,15 +15,11 @@ import removeUserIcon from './images/removeUserIcon.png'
 import editUserIcon from './images/editUserIcon.png'
 import { withAuthenticator, AmplifyForgotPassword, AmplifySignIn, AmplifySignOut, AmplifyAuthenticator, AmplifySignUp } from '@aws-amplify/ui-react';
 
-import { Component } from 'react';
-import { Auth } from 'aws-amplify';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  Redirect
 } from "react-router-dom";
 
 Amplify.configure(awsconfig);
@@ -42,7 +37,16 @@ const App = () => {
     }, []);
 
     function Home() {
-      if (user['signInUserSession']['accessToken']['payload']['cognito:groups'][0] == 'patients') {
+      if (user['signInUserSession']['accessToken']['payload']['cognito:groups'] == undefined) {
+        return (
+          <div class="position-absolute top-0 start-50 translate-middle-x square-unauthorized h1-unauthorized">
+            <h1>Unauthorized User</h1>
+            <br/>
+             <AmplifySignOut/> 
+          </div>
+        )
+      }
+      else if (user['signInUserSession']['accessToken']['payload']['cognito:groups'][0] == 'patients') {
       return (
             <div className="App">
             
@@ -259,15 +263,6 @@ const App = () => {
       </div>
         </div> 
         )
-      }
-      else {
-        return (
-          <div>
-            <h1>Unauthenticated User</h1>
-            <AmplifySignOut/> 
-          </div>
-        )
-
       }
     }
 
